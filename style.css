@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth; 
+}
+body{
+    background-color: #FFC0CB; 
+    color: #F9629F; 
+    line-height: 1.5;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 80px 20px; 
+}
+
+/* Hero Section */
+.hero{
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    background: #ef2a79; 
+    color: white; 
+    padding: 20px; 
+}
+.hero h1{
+    font-size: 3.5rem; 
+    margin-bottom: 10px; 
+}
+.hero .highlight{
+    font-size: 1.5rem; 
+    margin-bottom: 30px;
+    opacity: 0.9; 
+}
+/* Button */
+.btn{
+    display: inline-block; 
+    padding: 12px 30px; 
+    background-color: #ef2a79;
+    color: white; 
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgb(217, 140, 194);
+}
+
+/* About Me */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #ff6b8b;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px; /* Rounded corners */
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgb(217, 140, 194);
+}
+
+/* Research Section */
+.research-section {
+    background-color: #ef2a79;
+    color: white; 
+}
+
+.research-section h2 {
+    font-size: 2.5rem;
+    color: #ff6b8b;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.research-grid{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    max-width: 800 px; 
+    margin: 0 auto; 
+}
+
+.reasearch-card{
+    background: white; 
+    color:#F9629F;
+    padding: 30px; 
+    border-radius: 20px; 
+}
+
+.research-badge {
+    display: inline-block;
+    background-color: #FFC0CB;
+    color: #ef2a79;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.research-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ef2a79;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.research-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #ff6b8b;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* --- ABOUT ME SECTION --- */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #ff6b8b;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(255, 107, 139, 0.15);
+}
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.credit {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* --- RESPONSIVE DESIGN (FOR MOBILE PHONES) --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1.2rem; }
+    .about-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
