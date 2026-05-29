@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+    font-family: Geneva, Verdana, sans-serif;
 }
 html{
     scroll-behavior: smooth; 
@@ -18,31 +18,108 @@ body{
     padding: 80px 20px; 
 }
 
+/* Navigation Bar */
+.navbar{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #efacc7; 
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #FFC0CB;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    color: #ef2a79;
+}
+
 /* Hero Section */
-.hero{
-    height: 100vh; 
+
+.hero {
+    min-height: 100vh; 
     display: flex; 
     align-items: center; 
-    justify-content: center; 
-    text-align: center; 
     background: #ef2a79; 
     color: white; 
-    padding: 20px; 
+    padding-top: 80px; /* Leaves room so the menu buttons don't block the text */
 }
-.hero h1{
-    font-size: 3.5rem; 
-    margin-bottom: 10px; 
+
+.hero-container {
+    display: flex;
+    /* Flipped to row-reverse so the image sits on the left side of the text */
+    flex-direction: row-reverse; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
 }
-.hero .highlight{
-    font-size: 1.5rem; 
-    margin-bottom: 30px;
-    opacity: 0.9; 
+
+.hero-content {
+    flex: 1;
+    text-align: left; /* Aligns text cleanly to the left next to your photo */
 }
+
+/* 1. The cursive 'Hi!' rule */
+.greeting {
+    font-family: 'Brush Script MT', 'Comic Sans MS', cursive;
+    font-size: 4rem;
+    font-style: italic;
+    color: #FFC0CB;
+    margin-bottom: -10px;
+}
+
+/* 2. The Bold Comic Sans name rule */
+.main-name {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    font-weight: 900; 
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero .highlight {
+    color: white;
+    text-shadow: 2px 2px 0px #FFC0CB;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* PICTURE SPECIFICS: Positioned on the left with sharp edges */
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0px; /* 0px removes all rounding, making the edges perfectly sharp */
+    border: 10px solid white; /* Thick, classic white frame layout */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
 /* Button */
 .btn{
     display: inline-block; 
     padding: 12px 30px; 
-    background-color: #ef2a79;
+    background-color: #F9629F;
     color: white; 
 }
 
