@@ -1,58 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- must add Education somewhere -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shru Singh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <header class="hero">
-        <div class="hero-content">
-            <h2>Hi! I'm </h2>
-            <h1> shru! </h1>
-            <p> Researcher | Founder | Side-Quester </p>
-        </div>
-    </header>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shru Singh | Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <!-- Navigation Bar -->
-
-    <nav class="navbar">
-        <div class=""nav-links>
-            <a href="#about" class="nav-btn">Who?</a>
-            <a href="#education" class="nav-btn">Education</a>
-            <a href="#research" class="nav-btn">Investigations</a>
-        </div>
-    </nav>
-
-    <section id="about" class="container about-section">
-        <div class="about-text">
-        <h2>Who?</h2>
-        <p> I think, I do. </p>   
-        </div>
-        <div class = "about-image">
-            <img src="me.jpg" alt="This is what I look like!">
-        </div>
-    </section>
-
-    <section id="Research" class="container research-section">
-        <div class="research-text">
-            <h2>Investigations</h2>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-badge">Published.</div>
-                    <h3>The Pitfalls of Multiple-Choice Questions in Generative AI and Medical Education</h3>
-                    <a href="#" class="research-link">Read Full Article →</a>
-                </div>
+    <body>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#about" class="nav-btn" onclick="showPage('about')">about</a>
+                <a href="#research" class="nav-btn" onclick="showPage('research')">research</a>
+                <a href="#Save-A-Life" class="nav-btn" onclick="showPage('Save-A-Life')">Save-A-Life</a>
             </div>
+        </nav>
+        <!-- Home Page -->
+        <div id="page-home" class="page active">
+            <header class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h3>hi!</h3>
+                        <h3>I'm</h3>
+                        <h1><strong>shru</strong></h1>
+                        <p>Researcher | Founder | Side-Quester</p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="me.jpg" alt="This is what I look like!">
+                    </div>
+                </div>
+            </header>
+            <!-- Footer -->
+            <footer>
+                <p><a href="https://github.com/shrusingh8">GitHub</a>|<a href="https://www.linkedin.com/in/shrutika-singh-091297280/">LinkedIn</a></p>
+                <p class="credit">&copy; 2026 Crafted entirely from scratch</p>
+            </footer>
         </div>
-    </section>
+        <!-- Nonprofit Page -->
+        <div id="page-nonprofit" class="page">
+            <section class="container nonprofit-section">
+                <div class="nonprofit-text">
+                    <h2>Save-A-Life</h2>
+                    <div class="nonprofit-block">
+                        <div class="section-divider">
+                            <span>The Cause</span>
+                        </div>
+                        <div class="nonprofit-description">
+                            <div class="nonprofit-description-right">
+                                <p>Some description here</p>
+                                <p>Save a life!</p>
+                            </div>
+                            <div class="nonprofit-description-left">
+                                <!-- insert logo here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Research Page -->
+        <div id="page-research" class="page">
+            <section class="container research-section">
+                <div class="research-text">
+                    <h2>Research</h2>
+                    <div class="research-block">
+                        <div class="section-divider">
+                            <span>What I Do</span>
+                        </div>
+                        <div class="research-description">
+                            <div class="research-description-left">
+                                <h2>What I Do</h2>
+                            </div>
+                            <div class="research-description-right">
+                                <p>Some description here</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Published -->
+                    <div class="research-block">
+                        <div class="section-divider">
+                            <span>Published</span>
+                            <div class="divider-line"></div>
+                        </div>
+                        <div class="slideshow-wrapper">
+                            <div id="pub-slides" class="slides-track">
+                                <!-- Article 1 -->
+                                <div class="slide-card">
+                                    <div class="slide-left">
+                                        <h3>The Pitfalls of Multiple-Choice Questions in Generative AI and Medical Education</h3>
+                                        <p>Journal: Scientific Reports</p>
+                                        <a href="https://www.nature.com/articles/s41598-025-26036-7" class="research-link">Read Article</a>
+                                    </div>
+                                    <div class="slide-right">
+                                        <p>LLM perforamance on medical benchmarks may be inflated and illusory, driven by factors beyond medical knowledge and resasoning. To assess the validity of this hypothesis, we created a medical benchmark of free-response questions and recorded the performance of SOTA LLMs. The results presented an average absolute deterioration of 39.43%. Masking studies further solidified this claim as LLMs performed at 37.34% accuracy at 100% masking!</p>  
+                                    </div>
+                                </div>
+                                <!-- Article 2 -->
+                                <div class="slide-card">
+                                    <div class="slide-left">
+                                        <h3>CNS-Obsidian: A Neurosurgical Vision-Language Model Built From Scientific Publications</h3>
+                                        <a href="https://journals.lww.com/neurosurgery/fulltext/9900/cns_obsidian__a_neurosurgical_vision_language.2166.aspx" class="research-link">Read Article</a>
+                                        <p>Journal: Neurosurgery</p>
+                                    </div>
+                                    <div class="slide-right">
+                                        <p>some description</p>  
+                                    </div>
+                                </div>
+                                <!-- Article 3 -->
+                                <div class="slide-card">
+                                    <div class="slide-left">
+                                        <h3>Automated Generation and Human Evaluation of Neurosurgical Board Examination and Self-Assessment Questions</h3>
+                                        <p>Journal: Accepted into Neurosurgery Practice</p>
+                                        <p>Read Arictle: Coming Soon!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-controls">
+                                <div id="pub-dots" class="dots"></div>
+                                <div class="arrows">
+                                    <button id="pub-prev" class="arrow-btn"></button>
+                                    <button id="pub-next" class="arrow-btn"></button>
+                                </div>
+                            </div>
+                        </div> <!---closes slideshow wrapper-->
+                    </div> <!---closes published-block--->
+                    <div class="research-block">
+                        <div class="section-divider">
+                            <span>Projects in Progress</span>
+                            <div class="divider-line"></div>
+                        </div>
+                        <div class="slideshow-wrapper">
+                            <div id="wip-slides" class="slides-track">
+                                <!-- Project 1 -->
+                                <div class="slide-card">
+                                    <div class="slide-left">
+                                        <p>some description</p>
+                                    </div>
+                                     <div class="slide-right">
+                                        <h3>A BioMedical Review</h3>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="slide-controls">
+                                <div id="wip-dots" class="dots"></div>
+                                <div class="arrows">
+                                    <button id="wip-prev" class="arrow-btn"></button>
+                                    <button id="wip-next" class="arrow-btn"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!---closes in-progress block--->
+                </div> <!---closes research-text-->
+            </section> <!---closes section-research-->
+        </div> <!---closes page-research-->
+        
+        <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            // Show selected page
+            document.getElementById('page-' + pageId).classList.add('active');
+            // Update active nav link
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
+            const activeBtn = document.querySelector(`.nav-btn[onclick="showPage('${pageId}')"]`);
+            if (activeBtn) activeBtn.classList.add('active-link');
+        }
 
-    <footer>
-        <p>Connect with me on <a href="https://github.com">GitHub</a> or <a href="https://linkedin.com">LinkedIn</a></p>
-        <p class="credit">&copy; 2026 Crafted entirely from scratch</p>
-    </footer>
-</body>
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.replace('#', '') || 'home';
+            showPage(hash);
+        });
+
+        const initialHash = window.location.hash.replace('#', '') || 'home';
+        showPage(initialHash);
+
+        function makeSlider(trackId, dotsId, prevId, nextId) {
+        const track = document.getElementById(trackId);
+        const dotsEl = document.getElementById(dotsId);
+        const prevBtn = document.getElementById(prevId);
+        const nextBtn = document.getElementById(nextId);
+        if (!track) return;
+        const total = track.children.length;
+        let cur = 0;
+
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (i === 0 ? ' dot--active' : '');
+            dotsEl.appendChild(dot);
+        }
+
+        function go(n) {
+            cur = (n + total) % total;
+            track.style.transform = `translateX(-${cur * 100}%)`;
+            dotsEl.querySelectorAll('.dot').forEach((d, i) => {
+                d.classList.toggle('dot--active', i === cur);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => go(cur - 1));
+        nextBtn.addEventListener('click', () => go(cur + 1));
+        }
+
+        makeSlider('pub-slides', 'pub-dots', 'pub-prev', 'pub-next');
+        makeSlider('wip-slides', 'wip-dots', 'wip-prev', 'wip-next');
+        </script>
+        
+    </body>
 </html>
