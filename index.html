@@ -6,15 +6,16 @@
         <title>Shru Singh | Portfolio</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <!-- Navigation Bar -->
     <body>
+        <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="nav-links">
                 <a href="#about" class="nav-btn" onclick="showPage('about')">about</a>
                 <a href="#research" class="nav-btn" onclick="showPage('research')">research</a>
-                <a href="#Save-A-Life" class="nav-btn" onclick="showPage('Save-A-Life')">Save-A-Life</a>
+                <a href="#nonprofit" class="nav-btn" onclick="showPage('nonprofit')">Save-A-Life</a>
             </div>
         </nav>
+
         <!-- Home Page -->
         <div id="page-home" class="page active">
             <header class="hero">
@@ -30,12 +31,12 @@
                     </div>
                 </div>
             </header>
-            <!-- Footer -->
             <footer>
-                <p><a href="https://github.com/shrusingh8">GitHub</a>|<a href="https://www.linkedin.com/in/shrutika-singh-091297280/">LinkedIn</a></p>
+                <p><a href="https://github.com/shrusingh8">GitHub</a> | <a href="https://www.linkedin.com/in/shrutika-singh-091297280/">LinkedIn</a></p>
                 <p class="credit">&copy; 2026 Crafted entirely from scratch</p>
             </footer>
         </div>
+
         <!-- Nonprofit Page -->
         <div id="page-nonprofit" class="page">
             <section class="container nonprofit-section">
@@ -44,28 +45,33 @@
                     <div class="nonprofit-block">
                         <div class="section-divider">
                             <span>The Cause</span>
+                            <div class="divider-line"></div>
                         </div>
                         <div class="nonprofit-description">
+                            <div class="nonprofit-description-left">
+                                <!-- insert logo here -->
+                            </div>
                             <div class="nonprofit-description-right">
                                 <p>Some description here</p>
                                 <p>Save a life!</p>
-                            </div>
-                            <div class="nonprofit-description-left">
-                                <!-- insert logo here -->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
+
         <!-- Research Page -->
         <div id="page-research" class="page">
             <section class="container research-section">
                 <div class="research-text">
                     <h2>Research</h2>
+
+                    <!-- What I Do -->
                     <div class="research-block">
                         <div class="section-divider">
                             <span>What I Do</span>
+                            <div class="divider-line"></div>
                         </div>
                         <div class="research-description">
                             <div class="research-description-left">
@@ -76,6 +82,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Published -->
                     <div class="research-block">
                         <div class="section-divider">
@@ -84,6 +91,7 @@
                         </div>
                         <div class="slideshow-wrapper">
                             <div id="pub-slides" class="slides-track">
+
                                 <!-- Article 1 -->
                                 <div class="slide-card">
                                     <div class="slide-left">
@@ -92,38 +100,46 @@
                                         <a href="https://www.nature.com/articles/s41598-025-26036-7" class="research-link">Read Article</a>
                                     </div>
                                     <div class="slide-right">
-                                        <p>LLM perforamance on medical benchmarks may be inflated and illusory, driven by factors beyond medical knowledge and resasoning. To assess the validity of this hypothesis, we created a medical benchmark of free-response questions and recorded the performance of SOTA LLMs. The results presented an average absolute deterioration of 39.43%. Masking studies further solidified this claim as LLMs performed at 37.34% accuracy at 100% masking!</p>  
+                                        <p>LLM performance on medical benchmarks may be inflated and illusory, driven by factors beyond medical knowledge and reasoning. To assess the validity of this hypothesis, we created a medical benchmark of free-response questions and recorded the performance of SOTA LLMs. The results presented an average absolute deterioration of 39.43%. Masking studies further solidified this claim as LLMs performed at 37.34% accuracy at 100% masking!</p>
                                     </div>
                                 </div>
+
                                 <!-- Article 2 -->
                                 <div class="slide-card">
                                     <div class="slide-left">
                                         <h3>CNS-Obsidian: A Neurosurgical Vision-Language Model Built From Scientific Publications</h3>
-                                        <a href="https://journals.lww.com/neurosurgery/fulltext/9900/cns_obsidian__a_neurosurgical_vision_language.2166.aspx" class="research-link">Read Article</a>
                                         <p>Journal: Neurosurgery</p>
+                                        <a href="https://journals.lww.com/neurosurgery/fulltext/9900/cns_obsidian__a_neurosurgical_vision_language.2166.aspx" class="research-link">Read Article</a>
                                     </div>
                                     <div class="slide-right">
-                                        <p>some description</p>  
+                                        <p>Some description</p>
                                     </div>
                                 </div>
+
                                 <!-- Article 3 -->
                                 <div class="slide-card">
                                     <div class="slide-left">
                                         <h3>Automated Generation and Human Evaluation of Neurosurgical Board Examination and Self-Assessment Questions</h3>
                                         <p>Journal: Accepted into Neurosurgery Practice</p>
-                                        <p>Read Arictle: Coming Soon!</p>
+                                        <p>Read Article: Coming Soon!</p>
+                                    </div>
+                                    <div class="slide-right">
+                                        <p>Add a description here when ready.</p>
                                     </div>
                                 </div>
-                            </div>
+
+                            </div> <!-- closes pub-slides -->
                             <div class="slide-controls">
                                 <div id="pub-dots" class="dots"></div>
                                 <div class="arrows">
-                                    <button id="pub-prev" class="arrow-btn"></button>
-                                    <button id="pub-next" class="arrow-btn"></button>
+                                    <button id="pub-prev" class="arrow-btn">‹</button>
+                                    <button id="pub-next" class="arrow-btn">›</button>
                                 </div>
                             </div>
-                        </div> <!---closes slideshow wrapper-->
-                    </div> <!---closes published-block--->
+                        </div> <!-- closes slideshow-wrapper -->
+                    </div> <!-- closes published block -->
+
+                    <!-- Projects in Progress -->
                     <div class="research-block">
                         <div class="section-divider">
                             <span>Projects in Progress</span>
@@ -131,79 +147,80 @@
                         </div>
                         <div class="slideshow-wrapper">
                             <div id="wip-slides" class="slides-track">
+
                                 <!-- Project 1 -->
                                 <div class="slide-card">
                                     <div class="slide-left">
-                                        <p>some description</p>
-                                    </div>
-                                     <div class="slide-right">
                                         <h3>A BioMedical Review</h3>
-                                     </div>
+                                        <span class="wip-label">Draft in Progress</span>
+                                    </div>
+                                    <div class="slide-right">
+                                        <p>Some description</p>
+                                    </div>
                                 </div>
-                            </div>
+
+                            </div> <!-- closes wip-slides -->
                             <div class="slide-controls">
                                 <div id="wip-dots" class="dots"></div>
                                 <div class="arrows">
-                                    <button id="wip-prev" class="arrow-btn"></button>
-                                    <button id="wip-next" class="arrow-btn"></button>
+                                    <button id="wip-prev" class="arrow-btn">‹</button>
+                                    <button id="wip-next" class="arrow-btn">›</button>
                                 </div>
                             </div>
-                        </div>
-                    </div> <!---closes in-progress block--->
-                </div> <!---closes research-text-->
-            </section> <!---closes section-research-->
-        </div> <!---closes page-research-->
-        
+                        </div> <!-- closes slideshow-wrapper -->
+                    </div> <!-- closes in-progress block -->
+
+                </div> <!-- closes research-text -->
+            </section> <!-- closes research-section -->
+        </div> <!-- closes page-research -->
+
         <script>
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            // Show selected page
-            document.getElementById('page-' + pageId).classList.add('active');
-            // Update active nav link
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
-            const activeBtn = document.querySelector(`.nav-btn[onclick="showPage('${pageId}')"]`);
-            if (activeBtn) activeBtn.classList.add('active-link');
-        }
+            function showPage(pageId) {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById('page-' + pageId).classList.add('active');
+                document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
+                const activeBtn = document.querySelector(`.nav-btn[onclick="showPage('${pageId}')"]`);
+                if (activeBtn) activeBtn.classList.add('active-link');
+            }
 
-        window.addEventListener('hashchange', () => {
-            const hash = window.location.hash.replace('#', '') || 'home';
-            showPage(hash);
-        });
-
-        const initialHash = window.location.hash.replace('#', '') || 'home';
-        showPage(initialHash);
-
-        function makeSlider(trackId, dotsId, prevId, nextId) {
-        const track = document.getElementById(trackId);
-        const dotsEl = document.getElementById(dotsId);
-        const prevBtn = document.getElementById(prevId);
-        const nextBtn = document.getElementById(nextId);
-        if (!track) return;
-        const total = track.children.length;
-        let cur = 0;
-
-        for (let i = 0; i < total; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'dot' + (i === 0 ? ' dot--active' : '');
-            dotsEl.appendChild(dot);
-        }
-
-        function go(n) {
-            cur = (n + total) % total;
-            track.style.transform = `translateX(-${cur * 100}%)`;
-            dotsEl.querySelectorAll('.dot').forEach((d, i) => {
-                d.classList.toggle('dot--active', i === cur);
+            window.addEventListener('hashchange', () => {
+                const hash = window.location.hash.replace('#', '') || 'home';
+                showPage(hash);
             });
-        }
 
-        prevBtn.addEventListener('click', () => go(cur - 1));
-        nextBtn.addEventListener('click', () => go(cur + 1));
-        }
+            const initialHash = window.location.hash.replace('#', '') || 'home';
+            showPage(initialHash);
 
-        makeSlider('pub-slides', 'pub-dots', 'pub-prev', 'pub-next');
-        makeSlider('wip-slides', 'wip-dots', 'wip-prev', 'wip-next');
+            function makeSlider(trackId, dotsId, prevId, nextId) {
+                const track = document.getElementById(trackId);
+                const dotsEl = document.getElementById(dotsId);
+                const prevBtn = document.getElementById(prevId);
+                const nextBtn = document.getElementById(nextId);
+                if (!track) return;
+                const total = track.children.length;
+                let cur = 0;
+
+                for (let i = 0; i < total; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot' + (i === 0 ? ' dot--active' : '');
+                    dotsEl.appendChild(dot);
+                }
+
+                function go(n) {
+                    cur = (n + total) % total;
+                    track.style.transform = `translateX(-${cur * 100}%)`;
+                    dotsEl.querySelectorAll('.dot').forEach((d, i) => {
+                        d.classList.toggle('dot--active', i === cur);
+                    });
+                }
+
+                prevBtn.addEventListener('click', () => go(cur - 1));
+                nextBtn.addEventListener('click', () => go(cur + 1));
+            }
+
+            makeSlider('pub-slides', 'pub-dots', 'pub-prev', 'pub-next');
+            makeSlider('wip-slides', 'wip-dots', 'wip-prev', 'wip-next');
         </script>
-        
+
     </body>
 </html>
