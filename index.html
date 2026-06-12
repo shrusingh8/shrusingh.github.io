@@ -1,226 +1,774 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shru Singh | Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="nav-links">
-                <a href="#about" class="nav-btn" onclick="showPage('about')">about</a>
-                <a href="#research" class="nav-btn" onclick="showPage('research')">research</a>
-                <a href="#nonprofit" class="nav-btn" onclick="showPage('nonprofit')">Save-A-Life</a>
-            </div>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shru Singh | Portfolio</title>
+    <style>
+        :root {
+            --ink: #241416;
+            --muted: #72545c;
+            --paper: #fff7fa;
+            --panel: #fffafd;
+            --panel-deep: #f6dfe8;
+            --accent: #c96f8a;
+            --accent-dark: #7d3048;
+            --accent-soft: #f7d8e4;
+            --gold: #b98548;
+            --line: #ecd0dc;
+            --shadow: 0 18px 50px rgba(125, 48, 72, 0.14);
+            --radius: 24px;
+        }
 
-        <!-- Home Page -->
-        <div id="page-home" class="page active">
-            <header class="hero">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h3>hi!</h3>
-                        <h3>I'm</h3>
-                        <h1><strong>shru</strong></h1>
-                        <p>Researcher | Founder | Side-Quester</p>
-                    </div>
-                    <div class="hero-image">
-                        <img src="me.jpg" alt="This is what I look like!">
-                    </div>
-                </div>
-            </header>
-            <footer>
-                <p><a href="https://github.com/shrusingh8">GitHub</a> | <a href="https://www.linkedin.com/in/shrutika-singh-091297280/">LinkedIn</a></p>
-                <p class="credit">&copy; 2026 Crafted entirely from scratch</p>
-            </footer>
-        </div>
+        * {
+            box-sizing: border-box;
+        }
 
-        <!-- Nonprofit Page -->
-        <div id="page-nonprofit" class="page">
-            <section class="container nonprofit-section">
-                <div class="nonprofit-text">
-                    <h2>Save-A-Life</h2>
-                    <div class="nonprofit-block">
-                        <div class="section-divider">
-                            <span>The Cause</span>
-                            <div class="divider-line"></div>
-                        </div>
-                        <div class="nonprofit-description">
-                            <div class="nonprofit-description-left">
-                                <!-- insert logo here -->
-                            </div>
-                            <div class="nonprofit-description-right">
-                                <p>Some description here</p>
-                                <p>Save a life!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+        html {
+            scroll-behavior: smooth;
+        }
 
-        <!-- Research Page -->
-        <div id="page-research" class="page">
-            <section class="container research-section">
-                <div class="research-text">
-                    <h2>Research</h2>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(201, 111, 138, 0.22), transparent 34rem),
+                radial-gradient(circle at bottom right, rgba(185, 133, 72, 0.12), transparent 30rem),
+                var(--paper);
+            color: var(--ink);
+        }
 
-                    <!-- What I Do -->
-                    <div class="research-block">
-                        <div class="section-divider">
-                            <span>What I Do</span>
-                            <div class="divider-line"></div>
-                        </div>
-                        <div class="research-description">
-                            <div class="research-description-left">
-                                <h2>What I Do</h2>
-                            </div>
-                            <div class="research-description-right">
-                                <p>Some description here</p>
-                            </div>
-                        </div>
-                    </div>
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: linear-gradient(rgba(125, 48, 72, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(125, 48, 72, 0.035) 1px, transparent 1px);
+            background-size: 34px 34px;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 72%);
+        }
 
-                    <!-- Published -->
-                    <div class="research-block">
-                        <div class="section-divider">
-                            <span>Published</span>
-                            <div class="divider-line"></div>
-                        </div>
-                        <div class="slideshow-wrapper">
-                            <div id="pub-slides" class="slides-track">
+        ::selection {
+            background: var(--accent-soft);
+            color: var(--ink);
+        }
 
-                                <!-- Article 1 -->
-                                <div class="slide-card">
-                                    <div class="slide-left">
-                                        <h3>The Pitfalls of Multiple-Choice Questions in Generative AI and Medical Education</h3>
-                                        <p>Journal: Scientific Reports</p>
-                                        <a href="https://www.nature.com/articles/s41598-025-26036-7" class="research-link">Read Article</a>
-                                    </div>
-                                    <div class="slide-right">
-                                        <p>LLM performance on medical benchmarks may be inflated and illusory, driven by factors beyond medical knowledge and reasoning. To assess the validity of this hypothesis, we created a medical benchmark of free-response questions and recorded the performance of SOTA LLMs. The results presented an average absolute deterioration of 39.43%. Masking studies further solidified this claim as LLMs performed at 37.34% accuracy at 100% masking!</p>
-                                    </div>
-                                </div>
+        a {
+            color: var(--accent-dark);
+            text-decoration: none;
+        }
 
-                                <!-- Article 2 -->
-                                <div class="slide-card">
-                                    <div class="slide-left">
-                                        <h3>CNS-Obsidian: A Neurosurgical Vision-Language Model Built From Scientific Publications</h3>
-                                        <p>Journal: Neurosurgery</p>
-                                        <a href="https://journals.lww.com/neurosurgery/fulltext/9900/cns_obsidian__a_neurosurgical_vision_language.2166.aspx" class="research-link">Read Article</a>
-                                    </div>
-                                    <div class="slide-right">
-                                        <p>Some description</p>
-                                    </div>
-                                </div>
+        img {
+            max-width: 100%;
+            display: block;
+            filter: grayscale(100%) contrast(1.05);
+        }
 
-                                <!-- Article 3 -->
-                                <div class="slide-card">
-                                    <div class="slide-left">
-                                        <h3>Automated Generation and Human Evaluation of Neurosurgical Board Examination and Self-Assessment Questions</h3>
-                                        <p>Journal: Accepted into Neurosurgery Practice</p>
-                                        <p>Read Article: Coming Soon!</p>
-                                    </div>
-                                    <div class="slide-right">
-                                        <p>Add a description here when ready.</p>
-                                    </div>
-                                </div>
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            padding: 1rem clamp(1rem, 4vw, 3rem);
+            backdrop-filter: blur(18px);
+            background: rgba(255, 247, 250, 0.84);
+            border-bottom: 1px solid rgba(222, 208, 195, 0.8);
+        }
 
-                            </div> <!-- closes pub-slides -->
-                            <div class="slide-controls">
-                                <div id="pub-dots" class="dots"></div>
-                                <div class="arrows">
-                                    <button id="pub-prev" class="arrow-btn">‹</button>
-                                    <button id="pub-next" class="arrow-btn">›</button>
-                                </div>
-                            </div>
-                        </div> <!-- closes slideshow-wrapper -->
-                    </div> <!-- closes published block -->
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
 
-                    <!-- Projects in Progress -->
-                    <div class="research-block">
-                        <div class="section-divider">
-                            <span>Projects in Progress</span>
-                            <div class="divider-line"></div>
-                        </div>
-                        <div class="slideshow-wrapper">
-                            <div id="wip-slides" class="slides-track">
+        .nav-btn {
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 0.72rem 1.05rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: lowercase;
+            color: var(--ink);
+            background: rgba(255, 250, 253, 0.76);
+            box-shadow: 0 8px 20px rgba(125, 48, 72, 0.06);
+            transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+        }
 
-                                <!-- Project 1 -->
-                                <div class="slide-card">
-                                    <div class="slide-left">
-                                        <h3>A BioMedical Review</h3>
-                                        <span class="wip-label">Draft in Progress</span>
-                                    </div>
-                                    <div class="slide-right">
-                                        <p>Some description</p>
-                                    </div>
-                                </div>
+        .nav-btn:hover,
+        .nav-btn.active-link {
+            transform: translateY(-2px);
+            background: var(--accent-soft);
+            border-color: rgba(201, 111, 138, 0.44);
+        }
 
-                            </div> <!-- closes wip-slides -->
-                            <div class="slide-controls">
-                                <div id="wip-dots" class="dots"></div>
-                                <div class="arrows">
-                                    <button id="wip-prev" class="arrow-btn">‹</button>
-                                    <button id="wip-next" class="arrow-btn">›</button>
-                                </div>
-                            </div>
-                        </div> <!-- closes slideshow-wrapper -->
-                    </div> <!-- closes in-progress block -->
+        .page {
+            display: none;
+            animation: fadeUp 0.45s ease both;
+        }
 
-                </div> <!-- closes research-text -->
-            </section> <!-- closes research-section -->
-        </div> <!-- closes page-research -->
+        .page.active {
+            display: block;
+        }
 
-        <script>
-            function showPage(pageId) {
-                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-                document.getElementById('page-' + pageId).classList.add('active');
-                document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
-                const activeBtn = document.querySelector(`.nav-btn[onclick="showPage('${pageId}')"]`);
-                if (activeBtn) activeBtn.classList.add('active-link');
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container,
+        .hero {
+            width: min(1120px, calc(100% - 2rem));
+            margin: 0 auto;
+        }
+
+        .hero {
+            padding: clamp(3rem, 8vw, 6rem) 0 3rem;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+            gap: clamp(2rem, 5vw, 4rem);
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.8rem;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
+            background: rgba(255, 250, 253, 0.74);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: clamp(4rem, 15vw, 9rem);
+            line-height: 0.85;
+            margin: 1.3rem 0 1rem;
+            letter-spacing: -0.09em;
+        }
+
+        h2 {
+            font-size: clamp(2.3rem, 7vw, 5.2rem);
+            line-height: 0.9;
+            letter-spacing: -0.065em;
+            margin: 3rem 0 2.5rem;
+        }
+
+        h3 {
+            font-size: clamp(1.35rem, 2.4vw, 2rem);
+            line-height: 1.1;
+            letter-spacing: -0.035em;
+        }
+
+        h4 {
+            font-size: 1.08rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.72;
+        }
+
+        .hero-text .lead {
+            font-size: clamp(1.1rem, 2vw, 1.45rem);
+            max-width: 640px;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 38px;
+            padding: 0.7rem;
+            background: linear-gradient(145deg, var(--panel), var(--panel-deep));
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            transform: rotate(1deg);
+        }
+
+        .hero-image img {
+            border-radius: 30px;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
+
+        .section-card,
+        .about-block {
+            margin-bottom: 2rem;
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .section-divider span {
+            color: var(--accent-dark);
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+        }
+
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--line), transparent);
+        }
+
+        .card-grid,
+        .focus-grid,
+        .position-grid,
+        .conference-grid,
+        .mini-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .focus-grid,
+        .position-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .card-grid,
+        .conference-grid {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .mini-grid {
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        }
+
+        .info-card,
+        .focus-card,
+        .position-card,
+        .conference-card,
+        .hobby-card,
+        .impact-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: rgba(255, 250, 253, 0.86);
+            padding: clamp(1.1rem, 2vw, 1.5rem);
+            box-shadow: 0 12px 28px rgba(125, 48, 72, 0.07);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .info-card::after,
+        .focus-card::after,
+        .position-card::after,
+        .impact-card::after {
+            content: "";
+            position: absolute;
+            inset: auto 1.2rem 0 1.2rem;
+            height: 4px;
+            border-radius: 999px 999px 0 0;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            opacity: 0.65;
+        }
+
+        .info-card:hover,
+        .focus-card:hover,
+        .position-card:hover,
+        .conference-card:hover,
+        .hobby-card:hover,
+        .impact-card:hover,
+        .slide-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat {
+            display: inline-block;
+            color: var(--accent-dark);
+            font-weight: 900;
+            font-size: 1.45rem;
+            letter-spacing: -0.05em;
+        }
+
+        .slideshow-wrapper {
+            border: 1px solid var(--line);
+            border-radius: 30px;
+            padding: clamp(0.75rem, 2vw, 1rem);
+            background: rgba(255, 250, 253, 0.7);
+            box-shadow: 0 18px 46px rgba(125, 48, 72, 0.09);
+            overflow: hidden;
+        }
+
+        .slides-viewport {
+            overflow: hidden;
+            border-radius: 24px;
+        }
+
+        .slides-track {
+            display: flex;
+            transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .slide-card,
+        .honors-slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+            background: var(--panel);
+            border: 1px solid rgba(236, 208, 220, 0.9);
+            border-radius: 24px;
+            padding: clamp(1.25rem, 3vw, 2rem);
+        }
+
+        .slide-card {
+            display: grid;
+            grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+            gap: clamp(1rem, 3vw, 2rem);
+        }
+
+        .slide-left,
+        .slide-right {
+            min-width: 0;
+        }
+
+        .tag-row,
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin: 1rem 0;
+        }
+
+        .tag,
+        .meta-pill,
+        .wip-label {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(201, 111, 138, 0.28);
+            border-radius: 999px;
+            padding: 0.45rem 0.7rem;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .research-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 0.8rem;
+            color: var(--accent-dark);
+            text-decoration: none;
+            font-weight: 900;
+            border-bottom: 2px solid rgba(201, 111, 138, 0.48);
+        }
+
+        .slide-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .dots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            width: 0.7rem;
+            height: 0.7rem;
+            border-radius: 50%;
+            border: 1px solid var(--accent-dark);
+            background: transparent;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .dot--active {
+            background: var(--accent-dark);
+            transform: scale(1.2);
+        }
+
+        .arrows {
+            display: flex;
+            gap: 0.55rem;
+        }
+
+        .arrow-btn {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: var(--panel);
+            color: var(--accent-dark);
+            font-size: 1.7rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .arrow-btn:hover {
+            transform: translateY(-2px);
+            background: var(--accent-soft);
+        }
+
+        .honors-slide {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .honor-item {
+            border-radius: 18px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            padding: 1.1rem;
+        }
+
+        .experience-card .date-location,
+        .date-location {
+            color: var(--accent-dark);
+            font-weight: 800;
+            margin-bottom: 0.9rem;
+        }
+
+        .experience-card {
+            min-height: 100%;
+        }
+
+        .experience-card h4,
+        .job-title {
+            color: var(--ink);
+        }
+
+        .conference-image {
+            aspect-ratio: 16 / 10;
+            border-radius: 18px;
+            overflow: hidden;
+            background: var(--panel-deep);
+            margin-bottom: 1rem;
+            border: 1px solid var(--line);
+        }
+
+        .conference-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pub-title {
+            margin-bottom: 0.7rem;
+        }
+
+        .citation-count {
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            color: var(--accent-dark);
+            line-height: 0.9;
+            letter-spacing: -0.08em;
+            font-weight: 950;
+        }
+
+        .quote-panel {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        footer {
+            width: min(1120px, calc(100% - 2rem));
+            margin: 4rem auto 0;
+            padding: 2rem 0 3rem;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent-dark);
+            font-weight: 900;
+            border-bottom: 2px solid rgba(201, 111, 138, 0.44);
+            margin: 0 0.45rem;
+        }
+
+        button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 820px) {
+            .hero-content,
+            .slide-card,
+            .focus-grid,
+            .position-grid,
+            .honors-slide {
+                grid-template-columns: 1fr;
             }
 
-            window.addEventListener('hashchange', () => {
-                const hash = window.location.hash.replace('#', '') || 'home';
-                showPage(hash);
+            h1 {
+                font-size: clamp(4.3rem, 24vw, 7rem);
+            }
+
+            .slide-controls {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#about" class="nav-btn" onclick="showPage('about')">about</a>
+            <a href="#research" class="nav-btn" onclick="showPage('research')">research</a>
+            <a href="#experience" class="nav-btn" onclick="showPage('experience')">experience</a>
+            <a href="#nonprofit" class="nav-btn" onclick="showPage('nonprofit')">Save-A-Life</a>
+        </div>
+    </nav>
+
+    <div id="page-about" class="page active">
+        <header class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="eyebrow">Researcher · Founder · Side-Quester</span>
+                    <h1>shru</h1>
+                    <p class="lead">Hi, I’m Shru Singh. I study biology and computer science at NYU, build research at the edge of AI and medicine, and lead community-centered health projects.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="me.jpg" alt="Portrait of Shru Singh">
+                </div>
+            </div>
+        </header>
+
+        <section class="container about-section">
+            <div class="section-divider"><span>Education</span><div class="divider-line"></div></div>
+            <div class="card-grid">
+                <article class="info-card"><span class="stat">NYU</span><h3>Class of 2027</h3><p>Honors Biology and Computer Science major.</p></article>
+                <article class="info-card"><span class="stat">3.88</span><h3>Current GPA</h3><p>Dean’s List recognition beginning January 2024.</p></article>
+                <article class="info-card"><span class="stat">Paris</span><h3>Spring 2026</h3><p>Study abroad semester at NYU Paris, France.</p></article>
+            </div>
+
+            <div class="section-divider"><span>Honors & Recognition</span><div class="divider-line"></div></div>
+            <div class="slideshow-wrapper">
+                <div class="slides-viewport"><div id="honors-slides" class="slides-track">
+                    <div class="honors-slide">
+                        <article class="honor-item"><h4>NYU CAS Presidential Honors Scholar</h4><p>Highest honors designation for exceptional academic achievement.</p></article>
+                        <article class="honor-item"><h4>NYU Women in STEM Scholar</h4><p>Recognition for excellence and commitment to STEM fields.</p></article>
+                        <article class="honor-item"><h4>Dean’s List</h4><p>January 2024 to present.</p></article>
+                    </div>
+                    <div class="honors-slide">
+                        <article class="honor-item"><h4>Dean’s Undergraduate Research Fund Recipient</h4><p>Competitive award supporting independent research initiatives.</p></article>
+                        <article class="honor-item"><h4>Violet Internship & Research Award</h4><p>Merit-based funding for research and internship experiences.</p></article>
+                        <article class="honor-item"><h4>Intercultural Learning Fellow</h4><p>Selected to lead cross-cultural dialogue and peer learning.</p></article>
+                    </div>
+                    <div class="honors-slide">
+                        <article class="honor-item"><h4>NYU CAS Summer Scholarship</h4><p>Support for summer research and academic endeavors.</p></article>
+                        <article class="honor-item"><h4>Wasserman Internship Grant</h4><p>Funding for professional internship experience.</p></article>
+                        <article class="honor-item"><h4>Global Pathways Scholarship</h4><p>Support for international education and study abroad.</p></article>
+                    </div>
+                </div></div>
+                <div class="slide-controls"><div id="honors-dots" class="dots"></div><div class="arrows"><button id="honors-prev" class="arrow-btn" aria-label="Previous honors slide">‹</button><button id="honors-next" class="arrow-btn" aria-label="Next honors slide">›</button></div></div>
+            </div>
+
+            <div class="section-divider"><span>Hobbies & Interests</span><div class="divider-line"></div></div>
+            <div class="mini-grid">
+                <article class="hobby-card"><h3>Reading</h3><p>Mystery novels, detective storytelling, and books that push new ways of thinking.</p></article>
+                <article class="hobby-card"><h3>Music</h3><p>Keyboard as a creative outlet, from classical pieces to contemporary compositions.</p></article>
+                <article class="hobby-card"><h3>Big Questions</h3><p>Curiosity across biology, healthcare systems, ethics, and human experience.</p></article>
+            </div>
+        </section>
+
+        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=3Ewre4YAAAAJ" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
+    </div>
+
+    <div id="page-research" class="page">
+        <section class="container research-section">
+            <h2>Research</h2>
+
+            <div class="section-divider"><span>Focus Areas</span><div class="divider-line"></div></div>
+            <div class="focus-grid">
+                <article class="focus-card"><h3>AI in Healthcare & Medical Education</h3><p>I investigate how AI models can enhance diagnostic decision-making and student assessment. My research showed that LLM performance on medical benchmarks may be inflated, with a 39.43% performance deterioration when shifting from multiple-choice to free-response questions.</p></article>
+                <article class="focus-card"><h3>Genomics & Cellular Biology</h3><p>I use advanced nano-sequencing technologies and high-throughput screening to understand genomic mutations, cellular development, and mechanisms of long-term genomic stability.</p></article>
+            </div>
+
+            <div class="section-divider"><span>Current Research Positions</span><div class="divider-line"></div></div>
+            <div class="position-grid">
+                <article class="position-card"><h3>NYU Hochwagen Lab</h3><p class="date-location">February 2026 to Present</p><p>Advanced nano-sequencing for genomic mutation identification and long-term genomic stability.</p></article>
+                <article class="position-card"><h3>NYU Langone Oermann Lab</h3><p class="date-location">April 2023 to Present</p><p>Clinical integration of AI models for diagnostic decision-making and patient outcomes.</p></article>
+            </div>
+
+            <div class="section-divider"><span>Published</span><div class="divider-line"></div></div>
+            <div class="slideshow-wrapper">
+                <div class="slides-viewport"><div id="pub-slides" class="slides-track">
+                    <article class="slide-card">
+                        <div class="slide-left"><h3 class="pub-title">The Pitfalls of Multiple-Choice Questions in Generative AI and Medical Education</h3><div class="tag-row"><span class="tag">Scientific Reports 15(1), 42096</span><span class="tag">2025</span><span class="tag">Cited by 11*</span></div><a href="https://www.nature.com/articles/s41598-025-26036-7" class="research-link" target="_blank">Read Article</a></div>
+                        <div class="slide-right quote-panel"><p><strong>Authors:</strong> S Singh, A Alyakin, DA Alber, J Stryker, APS Tong, K Sangwon, N Goff, and collaborators.</p><p>This work examines how multiple-choice formats can inflate generative AI performance in medical education benchmarks.</p></div>
+                    </article>
+                    <article class="slide-card">
+                        <div class="slide-left"><h3 class="pub-title">Repurposing the Scientific Literature with Vision-Language Models</h3><div class="tag-row"><span class="tag">arXiv e-prints, arXiv:2502.19546</span><span class="tag">2025</span><span class="tag">Cited by 5</span></div></div>
+                        <div class="slide-right quote-panel"><p><strong>Authors:</strong> A Alyakin, J Stryker, DA Alber, KL Sangwon, B Duderstadt, A Save, and collaborators.</p><p>A vision-language model project focused on transforming scientific literature into reusable, structured knowledge.</p></div>
+                    </article>
+                    <article class="slide-card">
+                        <div class="slide-left"><h3 class="pub-title">1083 Automated Generation and Human Evaluation of Neurosurgical Board Examination and Self-Assessment Questions</h3><div class="tag-row"><span class="tag">Accepted to Neurosurgery Practice</span><span class="tag">2026</span><span class="tag">Board exam AI generation</span></div></div>
+                        <div class="slide-right quote-panel"><p><strong>Authors:</strong> A Alyakin, S Singh, J Stryker, DA Alber, JV Lee, A Save, DB Kurland, and collaborators.</p><p>Automated generation and human evaluation of neurosurgical board examination and self-assessment questions.</p></div>
+                    </article>
+                    <article class="slide-card">
+                        <div class="slide-left"><h3 class="pub-title">CNS-Obsidian: A Neurosurgical Vision-Language Model Built From Scientific Publications</h3><div class="tag-row"><span class="tag">Neurosurgery</span><span class="tag">2026</span><span class="tag">Vision-language model</span></div><a href="https://journals.lww.com/neurosurgery/fulltext/9900/cns_obsidian__a_neurosurgical_vision_language.2166.aspx" class="research-link" target="_blank">Read Article</a></div>
+                        <div class="slide-right quote-panel"><p><strong>Authors:</strong> MSE Anton Alyakin, J Stryker, DA Alber, JV Lee, KL Sangwon, S Singh, and collaborators.</p><p>CNS-Obsidian is a neurosurgical vision-language model built from scientific publications.</p></div>
+                    </article>
+                </div></div>
+                <div class="slide-controls"><div id="pub-dots" class="dots"></div><div class="arrows"><button id="pub-prev" class="arrow-btn" aria-label="Previous publication">‹</button><button id="pub-next" class="arrow-btn" aria-label="Next publication">›</button></div></div>
+            </div>
+
+            <div class="section-divider"><span>Conference Presentations</span><div class="divider-line"></div></div>
+            <div class="conference-grid">
+                <article class="conference-card"><div class="conference-image"><img src="cns-2025.jpg" alt="Congress of Neurological Surgeons 2025 in Los Angeles"></div><h3>Congress of Neurological Surgeons</h3><p>Fall 2025 · Los Angeles, CA</p><p><strong>GRPO vs. SFT: Optimizing LLMs for Decision Support</strong></p></article>
+                <article class="conference-card"><div class="conference-image"><img src="deans-conference-2025.jpg" alt="Dean's Research Conference 2025"></div><h3>Dean’s Research Conference</h3><p>Spring 2025 · NYU</p><p>Showcased AI in medical education research.</p></article>
+                <article class="conference-card"><div class="conference-image"><img src="your-conference.jpg" alt="Additional conference presentation"></div><h3>Upcoming Presentation</h3><p>Date · Location</p><p>Add your presentation title when ready.</p></article>
+            </div>
+
+            <div class="section-divider"><span>Projects in Progress</span><div class="divider-line"></div></div>
+            <div class="slideshow-wrapper">
+                <div class="slides-viewport"><div id="wip-slides" class="slides-track">
+                    <article class="slide-card"><div class="slide-left"><h3>A Biomedical Review</h3><span class="wip-label">Draft in Progress</span></div><div class="slide-right"><p>A comprehensive review synthesizing recent advances in biomedical research with applications to clinical practice and education.</p></div></article>
+                    <article class="slide-card"><div class="slide-left"><h3>Your Project Title</h3><span class="wip-label">Coming Soon</span></div><div class="slide-right"><p>Add project details here as they develop.</p></div></article>
+                </div></div>
+                <div class="slide-controls"><div id="wip-dots" class="dots"></div><div class="arrows"><button id="wip-prev" class="arrow-btn" aria-label="Previous project">‹</button><button id="wip-next" class="arrow-btn" aria-label="Next project">›</button></div></div>
+            </div>
+        </section>
+
+        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=3Ewre4YAAAAJ" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
+    </div>
+
+    <div id="page-experience" class="page">
+        <section class="container experience-section">
+            <h2>Experience</h2>
+
+            <div class="section-divider"><span>Professional Experience</span><div class="divider-line"></div></div>
+            <div class="slideshow-wrapper">
+                <div class="slides-viewport"><div id="professional-slides" class="slides-track">
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>RedHouse Communications</h3><p class="date-location">Consultant · April 2025 to June 2026</p></div><div class="slide-right"><p>Analyzed marketing strategies for clinical-stage biopharmaceutical clients to understand how complex medical innovations are communicated to public and professional audiences.</p><p>Synthesized raw project data into professional reports and decks for multidisciplinary stakeholders.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>MedRite Urgent Care</h3><p class="date-location">Medical Assistant · April 2024 to Present</p></div><div class="slide-right"><p>Delivered high-quality clinical support across geographically and socioeconomically diverse locations, from high-income neighborhoods to underserved areas in the Bronx.</p><p>Built practical experience in patient care, clinical workflows, and healthcare delivery.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>Kaplan</h3><p class="date-location">Student Brand Ambassador · April 2024 to Present</p></div><div class="slide-right"><p>Served as a liaison between Kaplan and the student community, promoting test prep resources and academic support services.</p><p>Built peer relationships while communicating the value of academic coaching.</p></div></article>
+                </div></div>
+                <div class="slide-controls"><div id="professional-dots" class="dots"></div><div class="arrows"><button id="professional-prev" class="arrow-btn" aria-label="Previous professional experience">‹</button><button id="professional-next" class="arrow-btn" aria-label="Next professional experience">›</button></div></div>
+            </div>
+
+            <div class="section-divider"><span>Leadership & Civic Engagement</span><div class="divider-line"></div></div>
+            <div class="slideshow-wrapper">
+                <div class="slides-viewport"><div id="leadership-slides" class="slides-track">
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>Save-A-Life</h3><p class="date-location">Founder · October 2024 to Present</p></div><div class="slide-right"><p>Direct a nonprofit strengthening healthcare infrastructure through dialogue between international donors, medical professionals, and local community leaders.</p><p>Spearhead fundraising and advocate for equitable healthcare solutions through actionable civic initiatives.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>NYU Futures in STEM</h3><p class="date-location">Program Leader · September 2025 to Present</p></div><div class="slide-right"><p>Lead mentorship programs and application workshops designed to foster inclusion for women in competitive STEM fields.</p><p>Moderate peer discussions on systemic barriers in STEM education and collaborative solutions.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>Heart 2 Heart Club at NYU</h3><p class="date-location">President · August 2024 to Present</p></div><div class="slide-right"><p>Lead a student organization dedicated to health equity by coordinating free blood pressure screenings in low-income, highly diverse neighborhoods.</p><p>Facilitate direct civic engagement between NYU students and community members.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>NYU Paris</h3><p class="date-location">Intercultural Learning Fellow · January 2026 to May 2026</p></div><div class="slide-right"><p>Lead peer discussions and host events at NYU Paris exploring global perspectives on civic challenges.</p><p>Moderate inclusive forums focused on open inquiry, perceptive listening, and cross-cultural understanding.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>NYU Phi Delta Epsilon</h3><p class="date-location">Class Captain · February 2024 to Present</p></div><div class="slide-right"><p>Orchestrate professional development initiatives and tradition-based programming for a cohort of pre-medical students.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>Project Outreach</h3><p class="date-location">Peer Mentor · April 2023 to August 2025</p></div><div class="slide-right"><p>Facilitated incoming students’ transition into the NYU community through city-wide service initiatives.</p><p>Moderated small-group discussions to help peers navigate urban collegiate life and community responsibility.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>NYU Residential Life</h3><p class="date-location">Program Assistant · April 2025 to September 2025</p></div><div class="slide-right"><p>Managed residential programming for high school students to bridge secondary education and the collegiate experience.</p></div></article>
+                </div></div>
+                <div class="slide-controls"><div id="leadership-dots" class="dots"></div><div class="arrows"><button id="leadership-prev" class="arrow-btn" aria-label="Previous leadership experience">‹</button><button id="leadership-next" class="arrow-btn" aria-label="Next leadership experience">›</button></div></div>
+            </div>
+
+            <div class="section-divider"><span>Volunteer Experience</span><div class="divider-line"></div></div>
+            <div class="slideshow-wrapper">
+                <div class="slides-viewport"><div id="volunteer-slides" class="slides-track">
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>NYU DATA</h3><p class="date-location">Volunteer · May 2024 to Present</p></div><div class="slide-right"><p>Facilitate therapeutic art projects for geriatric patients experiencing neurocognitive decline, encouraging creative expression and cognitive engagement.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>Sanctuary for Families</h3><p class="date-location">Volunteer · April 2024 to Present</p></div><div class="slide-right"><p>Provide targeted mathematics tutoring to high school girls to reinforce core academic concepts and build educational confidence.</p></div></article>
+                    <article class="slide-card experience-card"><div class="slide-left"><h3>The Bowery Mission</h3><p class="date-location">Volunteer · September 2023 to Present</p></div><div class="slide-right"><p>Distribute meals and essential resources to unhoused individuals and families experiencing local food insecurity.</p></div></article>
+                </div></div>
+                <div class="slide-controls"><div id="volunteer-dots" class="dots"></div><div class="arrows"><button id="volunteer-prev" class="arrow-btn" aria-label="Previous volunteer experience">‹</button><button id="volunteer-next" class="arrow-btn" aria-label="Next volunteer experience">›</button></div></div>
+            </div>
+        </section>
+
+        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=3Ewre4YAAAAJ" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
+    </div>
+
+    <div id="page-nonprofit" class="page">
+        <section class="container nonprofit-section">
+            <h2>Save-A-Life</h2>
+            <div class="section-divider"><span>The Mission</span><div class="divider-line"></div></div>
+            <div class="position-grid">
+                <article class="impact-card"><h3>Healthcare Infrastructure</h3><p>Save-A-Life strengthens healthcare infrastructure in underserved communities through meaningful dialogue between international donors, medical professionals, and local community leaders.</p></article>
+                <article class="impact-card"><h3>Equitable Training</h3><p>Founded in October 2024, the organization focuses on medical assistant training and sustainable healthcare development.</p></article>
+            </div>
+            <div class="section-divider"><span>Our Impact</span><div class="divider-line"></div></div>
+            <div class="impact-card"><h3>Community-centered global health</h3><p>Through strategic partnerships and fundraising, Save-A-Life bridges global health resources and local community needs. Sustainable healthcare improvement begins with listening to communities, empowering local leaders, and creating pathways for medical professionals to contribute expertise.</p></div>
+        </section>
+
+        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=3Ewre4YAAAAJ" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            const target = document.getElementById('page-' + pageId);
+            if (target) target.classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
+            const activeBtn = document.querySelector(`.nav-btn[onclick="showPage('${pageId}')"]`);
+            if (activeBtn) activeBtn.classList.add('active-link');
+        }
+
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.replace('#', '') || 'about';
+            showPage(hash);
+        });
+
+        function makeSlider(trackId, dotsId, prevId, nextId) {
+            const track = document.getElementById(trackId);
+            const dotsEl = document.getElementById(dotsId);
+            const prevBtn = document.getElementById(prevId);
+            const nextBtn = document.getElementById(nextId);
+            if (!track || !dotsEl || !prevBtn || !nextBtn) return;
+
+            const total = track.children.length;
+            let current = 0;
+            dotsEl.innerHTML = '';
+
+            Array.from({ length: total }).forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'dot' + (index === 0 ? ' dot--active' : '');
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                dot.addEventListener('click', () => go(index));
+                dotsEl.appendChild(dot);
             });
 
-            const initialHash = window.location.hash.replace('#', '') || 'home';
-            showPage(initialHash);
-
-            function makeSlider(trackId, dotsId, prevId, nextId) {
-                const track = document.getElementById(trackId);
-                const dotsEl = document.getElementById(dotsId);
-                const prevBtn = document.getElementById(prevId);
-                const nextBtn = document.getElementById(nextId);
-                if (!track) return;
-                const total = track.children.length;
-                let cur = 0;
-
-                for (let i = 0; i < total; i++) {
-                    const dot = document.createElement('div');
-                    dot.className = 'dot' + (i === 0 ? ' dot--active' : '');
-                    dotsEl.appendChild(dot);
-                }
-
-                function go(n) {
-                    cur = (n + total) % total;
-                    track.style.transform = `translateX(-${cur * 100}%)`;
-                    dotsEl.querySelectorAll('.dot').forEach((d, i) => {
-                        d.classList.toggle('dot--active', i === cur);
-                    });
-                }
-
-                prevBtn.addEventListener('click', () => go(cur - 1));
-                nextBtn.addEventListener('click', () => go(cur + 1));
+            function go(nextIndex) {
+                current = (nextIndex + total) % total;
+                track.style.transform = `translateX(-${current * 100}%)`;
+                dotsEl.querySelectorAll('.dot').forEach((dot, index) => {
+                    dot.classList.toggle('dot--active', index === current);
+                });
             }
 
-            makeSlider('pub-slides', 'pub-dots', 'pub-prev', 'pub-next');
-            makeSlider('wip-slides', 'wip-dots', 'wip-prev', 'wip-next');
-        </script>
+            prevBtn.addEventListener('click', () => go(current - 1));
+            nextBtn.addEventListener('click', () => go(current + 1));
+        }
 
-    </body>
+        const initialHash = window.location.hash.replace('#', '') || 'about';
+        showPage(initialHash);
+
+        makeSlider('honors-slides', 'honors-dots', 'honors-prev', 'honors-next');
+        makeSlider('pub-slides', 'pub-dots', 'pub-prev', 'pub-next');
+        makeSlider('wip-slides', 'wip-dots', 'wip-prev', 'wip-next');
+        makeSlider('professional-slides', 'professional-dots', 'professional-prev', 'professional-next');
+        makeSlider('leadership-slides', 'leadership-dots', 'leadership-prev', 'leadership-next');
+        makeSlider('volunteer-slides', 'volunteer-dots', 'volunteer-prev', 'volunteer-next');
+    </script>
+</body>
 </html>
