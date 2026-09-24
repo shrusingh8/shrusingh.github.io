@@ -3,328 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shru Singh | Portfolio</title>
+    <title>Shru Singh</title>
+    <meta name="description" content="Shru Singh — NYU Honors Biology & CS '27. Researcher in medical AI, Chief Scientist at NASA L'SPACE, founder of Save-A-Life.">
+    <meta property="og:title" content="Shru Singh">
+    <meta property="og:description" content="Researcher in medical AI · Chief Scientist, NASA L'SPACE · Founder, Save-A-Life · NYU '27">
+    <meta property="og:image" content="https://shrusingh8.github.io/me.jpg">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#about" class="nav-btn" onclick="showPage('about')">about</a>
-            <a href="#research" class="nav-btn" onclick="showPage('research')">research</a>
-            <a href="#experience" class="nav-btn" onclick="showPage('experience')">experience</a>
-            <a href="#nonprofit" class="nav-btn" onclick="showPage('nonprofit')">Save-A-Life</a>
-        </div>
-    </nav>
+    <div class="progress" aria-hidden="true"></div>
 
-    <div id="page-about" class="page active">
-        <header class="hero">
-            <div class="hero-content">
+    <header class="nav">
+        <a href="#top" class="mark">shru<span>.</span></a>
+        <nav class="nav-pill" aria-label="Sections">
+            <span class="nav-indicator" aria-hidden="true"></span>
+            <a href="#research">Research</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="mailto:ss17775@nyu.edu" class="nav-cta magnetic">Email ↗</a>
+    </header>
+
+    <main id="top">
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="hero-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="hero-inner wrap">
                 <div class="hero-text">
-                    <h3>hi!</h3>
-                    <h3>I'm</h3>
-                    <h1><strong>shru</strong></h1>
-                    <p>Researcher | Founder | Side-Quester</p>
+                    <p class="kicker reveal"><span class="dot-live"></span>New York · NYU Honors Biology &amp; CS · Class of 2027</p>
+                    <h1 class="split">Hi, I'm <em>Shru.</em></h1>
+                    <p class="rotator reveal" aria-label="Medical AI researcher, Chief Scientist at NASA L'SPACE, Nonprofit founder">
+                        <span class="rot-static">I'm a</span>
+                        <span class="rot-window"><span class="rot-word">medical AI researcher.</span><span class="rot-word">Chief Scientist at NASA L'SPACE.</span><span class="rot-word">nonprofit founder.</span><span class="rot-word">neurosurgery-AI collaborator.</span></span>
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="mailto:ss17775@nyu.edu" class="btn btn-pink magnetic">Email me</a>
+                        <a href="https://www.linkedin.com/in/shrutika-singh-091297280/" class="btn btn-ghost magnetic" target="_blank" rel="noopener">LinkedIn ↗</a>
+                        <a href="https://scholar.google.com/citations?hl=en&amp;user=3Ewre4YAAAAJ" class="btn btn-ghost magnetic" target="_blank" rel="noopener">Google Scholar ↗</a>
+                    </div>
                 </div>
-                <div class="hero-image">
-                    <img src="me.jpg" alt="This is what I look like!">
+                <div class="hero-photo reveal">
+                    <div class="photo-ring"><img src="me.jpg" alt="Portrait of Shru Singh"></div>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <section class="container about-section">
-            <div class="about-block">
-                <div class="section-divider"><span>Education</span><div class="divider-line"></div></div>
-                <div class="card-grid two-card-grid">
-                    <article class="info-card">
-                        <span class="eyebrow">New York University</span>
-                        <h3>Honors Biology and Computer Science</h3>
-                        <p>Class of 2027 · GPA 3.88</p>
+        <!-- ===== AFFILIATIONS MARQUEE ===== -->
+        <div class="marquee" aria-label="Affiliations">
+            <div class="marquee-track">
+                <span>NASA L'SPACE</span><span>NYU Langone Health</span><span>Scientific Reports</span><span>Neurosurgery</span><span>Congress of Neurological Surgeons</span><span>Neurosurgery Practice</span><span>NYU College of Arts &amp; Science</span>
+                <span aria-hidden="true">NASA L'SPACE</span><span aria-hidden="true">NYU Langone Health</span><span aria-hidden="true">Scientific Reports</span><span aria-hidden="true">Neurosurgery</span><span aria-hidden="true">Congress of Neurological Surgeons</span><span aria-hidden="true">Neurosurgery Practice</span><span aria-hidden="true">NYU College of Arts &amp; Science</span>
+            </div>
+        </div>
+
+        <!-- ===== BENTO STATS ===== -->
+        <section class="wrap bento">
+            <div class="tile glow tile-big reveal">
+                <span class="tile-label">Headline finding</span>
+                <div class="big-num"><strong data-count="39.43" data-decimals="2">39.43</strong><span>%</span></div>
+                <p>drop in LLM accuracy on medical exam questions once the answer choices were taken away, from my paper in <i>Scientific Reports</i>. High benchmark scores can overstate how well these models reason.</p>
+            </div>
+            <div class="tile glow reveal"><strong class="num" data-count="3">3</strong><span>peer-reviewed<br>publications</span></div>
+            <div class="tile glow reveal"><strong class="num" data-count="37">37</strong><span>citations on<br>Google Scholar</span></div>
+            <div class="tile glow reveal"><strong class="num" data-count="3">3</strong><span>research labs<br>since freshman year</span></div>
+            <div class="tile glow reveal"><strong class="num" data-count="3.88" data-decimals="2">3.88</strong><span>GPA · Presidential<br>Honors Scholar</span></div>
+        </section>
+
+        <!-- ===== RESEARCH ===== -->
+        <section id="research" class="section wrap">
+            <div class="section-head">
+                <span class="label reveal">01 — Research</span>
+                <h2 class="scrub">Three labs across medical AI, genomics, and <em>cell biology.</em></h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+                <article class="tl-item reveal">
+                    <span class="tl-date">Apr 2023 — Now</span>
+                    <h3>NYU Langone · Oermann Lab</h3>
+                    <p class="role">Research Assistant · Medical AI</p>
+                    <p>Evaluate how AI models can support diagnostic decision-making and patient outcomes, working with clinicians and neurosurgeons. Led to 3 peer-reviewed publications.</p>
+                    <div class="tags"><span>LLM evaluation</span><span>GRPO / SFT fine-tuning</span><span>Vision-language models</span></div>
+                </article>
+                <article class="tl-item reveal">
+                    <span class="tl-date">Feb 2026 — Now</span>
+                    <h3>NYU · Hochwagen Lab</h3>
+                    <p class="role">Research Assistant · Genomics</p>
+                    <p>Nano-sequencing to identify genomic mutations and study the factors behind long-term genomic stability.</p>
+                    <div class="tags"><span>Nano-sequencing</span><span>Genomic stability</span></div>
+                </article>
+                <article class="tl-item reveal">
+                    <span class="tl-date">Jan 2025 — Dec 2025</span>
+                    <h3>NYU · Eichenberger Lab</h3>
+                    <p class="role">Research Assistant · Cell Biology</p>
+                    <p>High-throughput screening of bacterial colonies to classify spore coat phenotypes for longitudinal studies of cellular development.</p>
+                    <div class="tags"><span>High-throughput screening</span><span>Phenotyping</span></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== PUBLICATIONS: horizontal scroll ===== -->
+        <section class="hscroll" aria-label="Publications">
+            <div class="hscroll-sticky">
+                <div class="wrap hscroll-head">
+                    <span class="label">Publications</span>
+                    <span class="hscroll-hint">scroll →</span>
+                </div>
+                <div class="hscroll-track">
+                    <article class="pub glow">
+                        <div class="pub-top"><span class="badge badge-pink">First author</span><span class="badge">Scientific Reports · 2025</span><span class="badge">Cited by 34</span></div>
+                        <h3>The Pitfalls of Multiple-Choice Questions in Generative AI and Medical Education</h3>
+                        <p class="authors"><b>S Singh</b>, A Alyakin, DA Alber, J Stryker, APS Tong, K Sangwon, N Goff, et al. <i>Sci Rep</i> 15(1):42096.</p>
+                        <p>When medical exam questions were rewritten without answer choices, LLM accuracy fell by 39.43%. Multiple-choice benchmarks can make models look better at clinical reasoning than they are.</p>
+                        <a href="https://www.nature.com/articles/s41598-025-26036-7" class="link" target="_blank" rel="noopener">Read the paper ↗</a>
                     </article>
-                    <article class="info-card blush-card">
-                        <span class="eyebrow">Global Study</span>
-                        <h3>Spring 2026 in Paris, France</h3>
-                        <p>Continuing interdisciplinary study across science, culture, and global perspectives.</p>
+                    <article class="pub glow">
+                        <div class="pub-top"><span class="badge">Neurosurgery · 2026</span><span class="badge">Cited by 3</span></div>
+                        <h3>CNS-Obsidian: A Neurosurgical Vision-Language Model Built From Scientific Publications</h3>
+                        <p class="authors">A Alyakin, J Stryker, DA Alber, JV Lee, KL Sangwon, B Duderstadt, …, <b>S Singh</b>, et al. <i>Neurosurgery.</i></p>
+                        <p>A neurosurgery-specific vision-language model trained on the scientific literature and compared against general-purpose AI.</p>
+                        <a href="https://journals.lww.com/neurosurgery/fulltext/9900/cns_obsidian__a_neurosurgical_vision_language.2166.aspx" class="link" target="_blank" rel="noopener">Read the paper ↗</a>
+                    </article>
+                    <article class="pub glow">
+                        <div class="pub-top"><span class="badge">Neurosurgery Practice · 2026</span></div>
+                        <h3>Automated Generation and Human Evaluation of Neurosurgical Board Examination Self-Assessment Questions</h3>
+                        <p class="authors">A Alyakin, J Stryker, DA Alber, JV Lee, <b>S Singh</b>, A Save, D Kurland, et al. <i>Neurosurg Pract</i> 7(4):e000275.</p>
+                        <p>Large multimodal models write board-style neurosurgery questions, and physicians evaluate them.</p>
+                        <a href="https://scholar.google.com/citations?hl=en&amp;user=3Ewre4YAAAAJ" class="link" target="_blank" rel="noopener">All on Google Scholar ↗</a>
                     </article>
                 </div>
             </div>
+        </section>
 
-            <div class="about-block">
-                <div class="section-divider"><span>Honors & Recognition</span><div class="divider-line"></div></div>
-                <div class="slideshow-wrapper">
-                    <div id="honors-slides" class="slides-track">
-                        <div class="slide-card compact-slide">
-                            <div class="mini-card"><strong>NYU CAS Presidential Honors Scholar</strong><p>Highest honors designation for exceptional academic achievement.</p></div>
-                            <div class="mini-card"><strong>NYU Women in STEM Scholar</strong><p>Recognition for excellence and commitment to STEM fields.</p></div>
-                            <div class="mini-card"><strong>Dean's List</strong><p>January 2024 - Present</p></div>
-                        </div>
-                        <div class="slide-card compact-slide">
-                            <div class="mini-card"><strong>Dean's Undergraduate Research Fund Recipient</strong><p>Competitive award supporting independent research initiatives.</p></div>
-                            <div class="mini-card"><strong>Violet Internship & Research Award</strong><p>Merit-based funding for research and internship experiences.</p></div>
-                            <div class="mini-card"><strong>Intercultural Learning Fellow</strong><p>Selected to lead cross-cultural dialogue and peer learning.</p></div>
-                        </div>
-                        <div class="slide-card compact-slide">
-                            <div class="mini-card"><strong>NYU CAS Summer Scholarship</strong><p>Support for summer research and academic endeavors.</p></div>
-                            <div class="mini-card"><strong>Wasserman Internship Grant</strong><p>Funding for professional internship experience.</p></div>
-                            <div class="mini-card"><strong>Global Pathways Scholarship</strong><p>Support for international education and study abroad.</p></div>
-                        </div>
-                    </div>
-                    <div class="slide-controls"><div id="honors-dots" class="dots"></div><div class="arrows"><button id="honors-prev" class="arrow-btn">‹</button><button id="honors-next" class="arrow-btn">›</button></div></div>
-                </div>
+        <!-- ===== TALKS ===== -->
+        <section class="wrap">
+            <h3 class="sub reveal">Conference presentations</h3>
+            <ul class="rows">
+                <li class="row reveal"><span class="row-date">Oct 2025 · Oral</span><div><h4>Congress of Neurological Surgeons</h4><p class="role">Annual Meeting · Los Angeles</p></div><p>Automated Generation and Human Evaluation of Neurosurgical Board Examination and Self-Assessment Questions. Abstract published in <i>Neurosurgery</i> 72(Suppl 1).</p></li>
+                <li class="row reveal"><span class="row-date">Oct 2025 · Poster</span><div><h4>Congress of Neurological Surgeons</h4><p class="role">Annual Meeting · Los Angeles</p></div><p>GRPO versus SFT: optimizing large language models for neurosurgical decision support.</p></li>
+                <li class="row reveal"><span class="row-date">May 2025 · Poster</span><div><h4>Dean's Undergraduate Research Conference</h4><p class="role">NYU</p></div><p>The pitfalls of multiple-choice questions in generative AI and medical education.</p></li>
+            </ul>
+        </section>
+
+        <!-- ===== LEADERSHIP ===== -->
+        <section id="leadership" class="section wrap">
+            <div class="section-head">
+                <span class="label reveal">02 — Leadership</span>
+                <h2 class="scrub">From leading a NASA science team to starting a <em>nonprofit.</em></h2>
             </div>
-
-            <div class="about-block">
-                <div class="section-divider"><span>Hobbies & Interests</span><div class="divider-line"></div></div>
-                <div class="card-grid three-card-grid">
-                    <article class="info-card"><span class="eyebrow">Reading</span><h3>Mystery novels</h3><p>I love detective storytelling and books that shift how I think about problem-solving.</p></article>
-                    <article class="info-card blush-card"><span class="eyebrow">Music</span><h3>Keyboard</h3><p>Music is a creative outlet and a way to reset between school, research, and service.</p></article>
-                    <article class="info-card"><span class="eyebrow">Learning</span><h3>Philosophy & science</h3><p>I’m curious about ideas at the intersection of biology, healthcare, ethics, and society.</p></article>
-                </div>
+            <div class="lead-grid">
+                <article class="lead glow reveal">
+                    <span class="lead-icon" aria-hidden="true">🚀</span>
+                    <span class="eyebrow">NASA L'SPACE · Sep 2026 — Now</span>
+                    <h3>Chief Scientist</h3>
+                    <p>Lead the Science Team on a NASA L'SPACE mission team, directing the science behind the mission concept.</p>
+                </article>
+                <article class="lead glow reveal">
+                    <span class="lead-icon" aria-hidden="true">✚</span>
+                    <span class="eyebrow">Save-A-Life · Oct 2024 — Now</span>
+                    <h3>Founder</h3>
+                    <p>Founded and direct a nonprofit strengthening healthcare infrastructure. Lead fundraising for medical-assistant training by bringing together international donors, clinicians, and local community leaders.</p>
+                </article>
+                <article class="lead glow reveal">
+                    <span class="lead-icon" aria-hidden="true">♥</span>
+                    <span class="eyebrow">Heart 2 Heart at NYU · Aug 2024 — Now</span>
+                    <h3>President</h3>
+                    <p>Run free blood-pressure screenings in low-income, highly diverse NYC neighborhoods, bringing NYU students into direct community health work.</p>
+                </article>
+                <article class="lead glow reveal">
+                    <span class="lead-icon" aria-hidden="true">✦</span>
+                    <span class="eyebrow">NYU Futures in STEM · Sep 2025 — Now</span>
+                    <h3>Program Leader</h3>
+                    <p>Lead mentorship programs and application workshops for women entering competitive STEM fields.</p>
+                </article>
             </div>
         </section>
-        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
-    </div>
 
-    <div id="page-research" class="page">
-        <section class="container research-section">
-            <div class="research-text">
-                <h2>Research</h2>
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" class="section wrap">
+            <div class="section-head">
+                <span class="label reveal">03 — Experience</span>
+                <h2 class="scrub">Clinical experience, industry work, and <em>service.</em></h2>
+            </div>
+            <ul class="rows">
+                <li class="row reveal"><span class="row-date">Apr 2024 — Now</span><div><h4>MedRite Urgent Care</h4><p class="role">Medical Assistant</p></div><p>Clinical support across NYC sites, from high-income neighborhoods to underserved areas of the Bronx.</p></li>
+                <li class="row reveal"><span class="row-date">Apr 2025 — Jun 2026</span><div><h4>RedHouse Communications</h4><p class="role">Consultant</p></div><p>Analyzed how clinical-stage biopharma clients communicate complex medical innovation; turned raw data into reports and decks for stakeholders.</p></li>
+                <li class="row reveal"><span class="row-date">Jan — May 2026</span><div><h4>NYU Paris</h4><p class="role">Intercultural Learning Fellow</p></div><p>Led peer discussions and moderated forums for international students on global civic challenges.</p></li>
+                <li class="row reveal"><span class="row-date">Feb 2024 — Now</span><div><h4>Phi Delta Epsilon (Pre-Med)</h4><p class="role">Class Captain</p></div><p>Run professional development and programming for a cohort of pre-medical students.</p></li>
+            </ul>
+            <p class="also reveal"><span>Also:</span> Kaplan Brand Ambassador · Project Outreach Peer Mentor · NYU Residential Life · Volunteer with NYU DATA, Sanctuary for Families &amp; The Bowery Mission</p>
 
-                <div class="about-block">
-                    <div class="section-divider"><span>Focus Areas</span><div class="divider-line"></div></div>
-                    <div class="card-grid two-card-grid">
-                        <article class="info-card tall-card">
-                            <span class="eyebrow">AI in Healthcare & Medical Education</span>
-                            <h3>Rethinking how medical AI is evaluated</h3>
-                            <p>I investigate how AI models can enhance diagnostic decision-making and student assessment. My research revealed that LLM performance on medical benchmarks may be significantly inflated, with a 39.43% performance deterioration when shifting from multiple-choice to free-response questions.</p>
-                        </article>
-                        <article class="info-card tall-card blush-card">
-                            <span class="eyebrow">Genomics & Cellular Biology</span>
-                            <h3>Understanding mutations and cellular mechanisms</h3>
-                            <p>I use advanced nano-sequencing technologies and high-throughput screening to understand genomic mutations, cellular development, and long-term genomic stability.</p>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="about-block">
-                    <div class="section-divider"><span>Current Research Positions</span><div class="divider-line"></div></div>
-                    <div class="card-grid two-card-grid">
-                        <article class="info-card tall-card">
-                            <span class="eyebrow">NYU Hochwagen Lab</span>
-                            <h3>Research Assistant</h3>
-                            <p class="date-location">Feb 2026 - Present</p>
-                            <p>Advanced nano-sequencing for genomic mutation identification and long-term genomic stability.</p>
-                        </article>
-                        <article class="info-card tall-card blush-card">
-                            <span class="eyebrow">NYU Langone Oermann Lab</span>
-                            <h3>Research Assistant</h3>
-                            <p class="date-location">Apr 2023 - Present</p>
-                            <p>Clinical integration of AI models for diagnostic decision-making, medical education, and patient outcomes.</p>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="about-block">
-                    <div class="section-divider"><span>Published</span><div class="divider-line"></div></div>
-                    <div class="slideshow-wrapper">
-                        <div id="pub-slides" class="slides-track">
-                            <article class="slide-card publication-card">
-                                <div class="slide-left">
-                                    <span class="eyebrow">Scientific Reports · 2025</span>
-                                    <h3>The pitfalls of multiple-choice questions in generative AI and medical education</h3>
-                                    <p><strong>Authors:</strong> S Singh, A Alyakin, DA Alber, J Stryker, APS Tong, K Sangwon, N Goff, and collaborators</p>
-                                    <a href="https://www.nature.com/articles/s41598-025-26036-7" class="research-link" target="_blank">Read Article</a>
-                                </div>
-                                <div class="slide-right">
-                                    <div class="stat-row"><span>Cited by</span><strong>11*</strong></div>
-                                    <div class="stat-row"><span>Year</span><strong>2025</strong></div>
-                                    <p>Examines how multiple-choice formats can inflate generative AI performance in medical education, with a major performance drop when questions are converted to free response.</p>
-                                </div>
-                            </article>
-
-                            <article class="slide-card publication-card">
-                                <div class="slide-left">
-                                    <span class="eyebrow">arXiv e-prints · 2025</span>
-                                    <h3>Repurposing the scientific literature with vision-language models</h3>
-                                    <p><strong>Authors:</strong> A Alyakin, J Stryker, DA Alber, KL Sangwon, B Duderstadt, A Save, S Singh, and collaborators</p>
-                                </div>
-                                <div class="slide-right">
-                                    <div class="stat-row"><span>Cited by</span><strong>5</strong></div>
-                                    <div class="stat-row"><span>Year</span><strong>2025</strong></div>
-                                    <p>Explores how vision-language models can transform scientific literature into structured knowledge for biomedical and clinical research applications.</p>
-                                </div>
-                            </article>
-
-                            <article class="slide-card publication-card">
-                                <div class="slide-left">
-                                    <span class="eyebrow">Neurosurgery Practice · 2026</span>
-                                    <h3>Automated Generation and Human Evaluation of Neurosurgical Board Examination and Self-Assessment Questions</h3>
-                                    <p><strong>Authors:</strong> A Alyakin, S Singh, J Stryker, DA Alber, JV Lee, A Save, DB Kurland, and collaborators</p>
-                                </div>
-                                <div class="slide-right">
-                                    <div class="stat-row"><span>Status</span><strong>Accepted</strong></div>
-                                    <div class="stat-row"><span>Year</span><strong>2026</strong></div>
-                                    <p>Accepted to <em>Neurosurgery Practice</em>. This work studies AI-generated neurosurgical board examination and self-assessment questions with human evaluation.</p>
-                                </div>
-                            </article>
-
-                            <article class="slide-card publication-card">
-                                <div class="slide-left">
-                                    <span class="eyebrow">Neurosurgery · 2026</span>
-                                    <h3>CNS-Obsidian: A Neurosurgical Vision-Language Model Built From Scientific Publications</h3>
-                                    <p><strong>Authors:</strong> MSE Anton Alyakin, J Stryker, DA Alber, JV Lee, KL Sangwon, S Singh, and collaborators</p>
-                                    <a href="https://journals.lww.com/neurosurgery/fulltext/9900/cns_obsidian__a_neurosurgical_vision_language.2166.aspx" class="research-link" target="_blank">Read Article</a>
-                                </div>
-                                <div class="slide-right">
-                                    <div class="stat-row"><span>Journal</span><strong>Neurosurgery</strong></div>
-                                    <div class="stat-row"><span>Year</span><strong>2026</strong></div>
-                                    <p>A neurosurgical vision-language model built from scientific publications to support literature-based knowledge extraction and clinical reasoning.</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="slide-controls"><div id="pub-dots" class="dots"></div><div class="arrows"><button id="pub-prev" class="arrow-btn">‹</button><button id="pub-next" class="arrow-btn">›</button></div></div>
-                    </div>
-                </div>
-
-                <div class="about-block">
-                    <div class="section-divider"><span>Conference Presentations</span><div class="divider-line"></div></div>
-                    <div class="conference-grid">
-                        <article class="conference-card"><div class="conference-image"><img src="cns-2025.jpeg" alt="Congress of Neurological Surgeons 2025 - Los Angeles"></div><h4>Congress of Neurological Surgeons</h4><p>Fall 2025 | Los Angeles, CA</p><p><strong>GRPO vs. SFT: Optimizing LLMs for Decision Support</strong></p></article>
-                        <article class="conference-card"><div class="conference-image"><img src="deans-conference-2025.png" alt="Dean's Research Conference 2025"></div><h4>Dean's Research Conference</h4><p>Spring 2025 | NYU</p><p>Showcased AI in medical education research</p></article>
-                        <article class="conference-card"><div class="conference-image"><img src="cns-oral-2025.jpeg" alt="Congress of Neurological Surgeons 2025 - Los Angeles"></div><h4>Congress of Neurological Surgeons</h4><p>Fall 2025 | Los Angeles, CA</p><p><strong>Automated Generation and Human Evaluation of Neurosurgical Board Examination and Self-Assessment Questions</p></article>
-                    </div>
-                </div>
-
-                <div class="about-block">
-                    <div class="section-divider"><span>Projects in Progress</span><div class="divider-line"></div></div>
-                    <div class="slideshow-wrapper">
-                        <div id="wip-slides" class="slides-track">
-                            <article class="slide-card"><div class="slide-left"><span class="eyebrow">Draft in Progress</span><h3>A Biomedical Review</h3></div><div class="slide-right"><p>A comprehensive review synthesizing recent advances in biomedical research with applications to clinical practice and education.</p></div></article>
-                            <article class="slide-card"><div class="slide-left"><span class="eyebrow">Coming Soon</span><h3>Your Project Title</h3></div><div class="slide-right"><p>Add your project details here as they develop.</p></div></article>
-                        </div>
-                        <div class="slide-controls"><div id="wip-dots" class="dots"></div><div class="arrows"><button id="wip-prev" class="arrow-btn">‹</button><button id="wip-next" class="arrow-btn">›</button></div></div>
-                    </div>
-                </div>
+            <h3 class="sub reveal">Honors</h3>
+            <div class="chips">
+                <span class="chip chip-hot">NYU CAS Presidential Honors Scholar</span>
+                <span class="chip chip-hot">Women in STEM Scholar</span>
+                <span class="chip chip-hot">Dean's Undergraduate Research Fund</span>
+                <span class="chip">Dean's List · 2024 — Present</span>
+                <span class="chip">Violet Internship &amp; Research Award</span>
+                <span class="chip">Wasserman Internship Grant</span>
+                <span class="chip">CAS Summer Scholarship</span>
+                <span class="chip">Global Pathways Scholarship</span>
+                <span class="chip">Intercultural Learning Fellow</span>
             </div>
         </section>
-        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
-    </div>
+    </main>
 
-    <div id="page-experience" class="page">
-        <section class="container experience-section">
-            <div class="experience-text">
-                <h2>Experience</h2>
-
-                <div class="about-block">
-                    <div class="section-divider"><span>Professional Experience</span><div class="divider-line"></div></div>
-                    <div class="slideshow-wrapper">
-                        <div id="professional-slides" class="slides-track">
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">April 2025 - Present</span><h3>RedHouse Communications</h3><p class="role-tag">Consultant</p></div><div class="slide-right"><p>Analyzed diverse marketing strategies for clinical-stage biopharmaceutical clients and synthesized raw project data into professional reports and presentation decks for multi-disciplinary stakeholders.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">April 2024 - Present</span><h3>MedRite Urgent Care</h3><p class="role-tag">Medical Assistant</p></div><div class="slide-right"><p>Delivered high-quality clinical support across geographically and socioeconomically diverse locations, gaining practical experience in patient care, clinical workflows, and healthcare delivery.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">April 2024 - Present</span><h3>Kaplan</h3><p class="role-tag">Student Brand Ambassador</p></div><div class="slide-right"><p>Served as a liaison between Kaplan and the student community, promoting test prep resources, academic support services, and peer-facing educational programs.</p></div></article>
-                        </div>
-                        <div class="slide-controls"><div id="professional-dots" class="dots"></div><div class="arrows"><button id="professional-prev" class="arrow-btn">‹</button><button id="professional-next" class="arrow-btn">›</button></div></div>
-                    </div>
-                </div>
-
-                <div class="about-block">
-                    <div class="section-divider"><span>Leadership & Civic Engagement</span><div class="divider-line"></div></div>
-                    <div class="slideshow-wrapper">
-                        <div id="leadership-slides" class="slides-track">
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">October 2024 - Present</span><h3>Save-A-Life</h3><p class="role-tag">Founder</p></div><div class="slide-right"><p>Direct a non-profit focused on strengthening healthcare infrastructure by facilitating dialogue between international donors, medical professionals, and local community leaders.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">September 2025 - Present</span><h3>NYU Futures in STEM</h3><p class="role-tag">Program Leader</p></div><div class="slide-right"><p>Lead mentorship programs and application workshops that support women in competitive STEM fields while creating space for collaborative problem-solving.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">August 2024 - Present</span><h3>Heart 2 Heart Club at NYU</h3><p class="role-tag">President</p></div><div class="slide-right"><p>Lead a student organization dedicated to health equity by coordinating free blood pressure screenings and community-centered health initiatives.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">January 2026 - Present</span><h3>NYU Paris</h3><p class="role-tag">Intercultural Learning Fellow</p></div><div class="slide-right"><p>Facilitate cross-cultural dialogue through peer-led discussions, inclusive forums, and events that explore global perspectives on civic challenges.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">February 2024 - Present</span><h3>NYU Phi Delta Epsilon</h3><p class="role-tag">Class Captain</p></div><div class="slide-right"><p>Orchestrate professional development initiatives and tradition-based programming for a cohort of pre-medical students.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">April 2023 - August 2025</span><h3>Project Outreach</h3><p class="role-tag">Peer Mentor</p></div><div class="slide-right"><p>Supported incoming students through city-wide service initiatives, small-group discussions, and programming that fostered belonging and civic responsibility.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">April 2025 - September 2025</span><h3>NYU Residential Life</h3><p class="role-tag">Program Assistant</p></div><div class="slide-right"><p>Managed residential programming for high school students to bridge the gap between secondary education and collegiate life.</p></div></article>
-                        </div>
-                        <div class="slide-controls"><div id="leadership-dots" class="dots"></div><div class="arrows"><button id="leadership-prev" class="arrow-btn">‹</button><button id="leadership-next" class="arrow-btn">›</button></div></div>
-                    </div>
-                </div>
-
-                <div class="about-block">
-                    <div class="section-divider"><span>Volunteer Experience</span><div class="divider-line"></div></div>
-                    <div class="slideshow-wrapper">
-                        <div id="volunteer-slides" class="slides-track">
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">May 2024 - Present</span><h3>NYU DATA</h3><p class="role-tag">Volunteer</p></div><div class="slide-right"><p>Facilitate therapeutic art projects for geriatric patients experiencing neurocognitive decline to foster creative expression and cognitive engagement.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">April 2024 - Present</span><h3>Sanctuary for Families</h3><p class="role-tag">Volunteer</p></div><div class="slide-right"><p>Provide targeted mathematics tutoring to high school girls to reinforce core academic concepts and boost educational confidence.</p></div></article>
-                            <article class="slide-card experience-slide"><div class="slide-left"><span class="eyebrow">September 2023 - Present</span><h3>The Bowery Mission</h3><p class="role-tag">Volunteer</p></div><div class="slide-right"><p>Distribute meals and essential resources to unhoused individuals and families experiencing local food insecurity.</p></div></article>
-                        </div>
-                        <div class="slide-controls"><div id="volunteer-dots" class="dots"></div><div class="arrows"><button id="volunteer-prev" class="arrow-btn">‹</button><button id="volunteer-next" class="arrow-btn">›</button></div></div>
-                    </div>
-                </div>
+    <!-- ===== CONTACT ===== -->
+    <footer id="contact" class="footer">
+        <div class="footer-glow" aria-hidden="true"></div>
+        <div class="wrap">
+            <p class="label reveal">04 — Contact</p>
+            <h2 class="footer-title split-scroll">Let's <em>connect.</em></h2>
+            <p class="footer-sub reveal">Open to research and industry opportunities in AI, medicine, and science.</p>
+            <div class="footer-actions reveal">
+                <button class="email-copy magnetic" type="button" data-email="ss17775@nyu.edu"><span class="email-text">ss17775@nyu.edu</span><span class="email-hint">click to copy</span></button>
             </div>
-        </section>
-        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
-    </div>
-
-    <div id="page-nonprofit" class="page">
-        <section class="container nonprofit-section">
-            <div class="nonprofit-text">
-                <h2>Save-A-Life</h2>
-                <div class="about-block">
-                    <div class="section-divider"><span>The Mission</span><div class="divider-line"></div></div>
-                    <div class="card-grid two-card-grid">
-                        <article class="info-card tall-card"><span class="eyebrow">Mission</span><h3>Strengthening healthcare infrastructure</h3><p>Save-A-Life facilitates meaningful dialogue between international donors, medical professionals, and local community leaders.</p></article>
-                        <article class="info-card tall-card blush-card"><span class="eyebrow">Impact</span><h3>Community-centered healthcare</h3><p>Through strategic partnerships and fundraising, Save-A-Life bridges global health resources with local community needs.</p></article>
-                    </div>
-                </div>
+            <div class="footer-links reveal">
+                <a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                <a href="https://scholar.google.com/citations?hl=en&amp;user=3Ewre4YAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+                <a href="https://github.com/shrusingh8" target="_blank" rel="noopener">GitHub ↗</a>
             </div>
-        </section>
-        <footer><p><a href="https://github.com/shrusingh8" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/shrutika-singh-091297280/" target="_blank">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank">Google Scholar</a></p><p class="credit">&copy; 2026 Crafted entirely from scratch</p></footer>
-    </div>
+            <p class="credit">© 2026 Shru Singh · New York · Built from scratch</p>
+        </div>
+    </footer>
 
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById('page-' + pageId).classList.add('active');
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
-            const activeBtn = document.querySelector(`.nav-btn[onclick="showPage('${pageId}')"]`);
-            if (activeBtn) activeBtn.classList.add('active-link');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        window.addEventListener('hashchange', () => {
-            const hash = window.location.hash.replace('#', '') || 'about';
-            showPage(hash);
-        });
-
-        function makeSlider(trackId, dotsId, prevId, nextId) {
-            const track = document.getElementById(trackId);
-            const dotsEl = document.getElementById(dotsId);
-            const prevBtn = document.getElementById(prevId);
-            const nextBtn = document.getElementById(nextId);
-            if (!track || !dotsEl || !prevBtn || !nextBtn) return;
-            const total = track.children.length;
-            let cur = 0;
-            dotsEl.innerHTML = '';
-
-            for (let i = 0; i < total; i++) {
-                const dot = document.createElement('button');
-                dot.className = 'dot' + (i === 0 ? ' dot--active' : '');
-                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                dot.addEventListener('click', () => go(i));
-                dotsEl.appendChild(dot);
-            }
-
-            function go(n) {
-                cur = (n + total) % total;
-                track.style.transform = `translateX(-${cur * 100}%)`;
-                dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('dot--active', i === cur));
-            }
-
-            prevBtn.addEventListener('click', () => go(cur - 1));
-            nextBtn.addEventListener('click', () => go(cur + 1));
-        }
-
-        const initialHash = window.location.hash.replace('#', '') || 'about';
-        showPage(initialHash);
-        makeSlider('honors-slides', 'honors-dots', 'honors-prev', 'honors-next');
-        makeSlider('pub-slides', 'pub-dots', 'pub-prev', 'pub-next');
-        makeSlider('wip-slides', 'wip-dots', 'wip-prev', 'wip-next');
-        makeSlider('professional-slides', 'professional-dots', 'professional-prev', 'professional-next');
-        makeSlider('leadership-slides', 'leadership-dots', 'leadership-prev', 'leadership-next');
-        makeSlider('volunteer-slides', 'volunteer-dots', 'volunteer-prev', 'volunteer-next');
-    </script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
